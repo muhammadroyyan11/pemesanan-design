@@ -462,7 +462,7 @@ class Admin extends CI_Controller
 				foreach ($cek_data->result() as $key => $value);
 				$main['data_pembeli'] = $this->madmin->tampil_data_where('tb_pembeli', array('id' => $value->id_pembeli));
 				$main['bukti_pembayaran'] = $this->madmin->tampil_data_where('tb_foto_pembelian', array('no' => $value->no));
-
+				$main['bukti_pelunasan'] = $this->madmin->tampil_pelunasan(array('no' => $value->no))->row();
 				if ($value->desain == 0) {
 					$main['data_produk'] = $this->madmin->tampil_data_where('tb_produk', array('no' => $value->id_produk));
 					$main['main'] = 'admin/menu/proses_pembuatan_proses';

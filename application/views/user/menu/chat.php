@@ -55,7 +55,7 @@
                 <form action="<?= site_url('user/send_msg') ?>" method="POST">
 
                     <div class="input-group">
-                        <input type="text" class="form-control" name="send_msg" placeholder="Write message..." />
+                        <input type="text" class="form-chat" name="send_msg" placeholder="Write message..." />
 
                         <button type="submit" class="btn btn-primary">
                             <i class="fa fa-send">kirim</i>
